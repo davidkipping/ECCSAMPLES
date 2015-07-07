@@ -15,7 +15,7 @@ import scipy.special
 # host star. A fundamental assumption of this code is that the intinsic
 # prior distribution of eccentricity, P(e), is described by a Beta distribution
 # with shape parameters a & b. One may also draw directly from the intrinsic
-# priors instead, by setting the logical "transit" to FALSE.
+# priors instead, by setting the logical "transit" to 0.
 
 # === INPUTS ===
 # transit = Logical, where 1 => planet is known to transit its host star;
@@ -53,9 +53,9 @@ import scipy.special
 #   [http://mpmath.org]
 #
 # === COMPUTATION TIME ===
-# Computation time is ~20s per sample using an Intel Core i7-3720QM
+# Computation time is ~50ms per sample using an Intel Core i7-3720QM
 # processor with hyperthreading activated. Note that the Fortran version
-# is ~40,000 faster.
+# is ~100 faster.
 
 # ==============================================================================
 def ecc_sample(transit,verbose,alpha,beta,xe,xw):
